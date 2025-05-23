@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manga Quiz Airdrop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@thirdweb-dev/sdk@3/dist/browser/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-panel">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard"></ul>
+    </div>
+
+    <div class="quiz-container">
+      <div class="quiz-box" id="quiz-box">
+        <img src="anpan.png.png" alt="Logo" class="logo" />
+        <h1>Manga Quiz</h1>
+        <div id="question-area">
+          <p>Loading questions...</p>
+        </div>
+        <div id="answer-buttons"></div>
+        <div id="navigation">
+          <button id="next-btn" class="hidden">Next</button>
+        </div>
+        <div id="score-display"></div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <h2>Enter Your Name</h2>
+      <input type="text" id="username" placeholder="Your name" />
+      <button onclick="saveUsername()">OK</button>
+
+      <h2>Connect Wallet</h2>
+      <input type="text" id="wallet-address" placeholder="Wallet address" disabled />
+      <button onclick="connectWallet()">Connect</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
